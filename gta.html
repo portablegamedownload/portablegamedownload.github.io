@@ -1,0 +1,188 @@
+﻿<html>
+<body bgcolor="#008C8C">
+<center>
+ <link rel="stylesheet" href="gta.css"/>
+        <style>
+			body{
+				background:#333 url(bg.jpg) repeat top left;
+				font-family:Arial;
+			}
+			span.reference{
+				position:fixed;
+				left:10px;
+				bottom:10px;
+				font-size:12px;
+			}
+			span.reference a{
+				color:#aaa;
+				text-transform:uppercase;
+				text-decoration:none;
+				text-shadow:1px 1px 1px #000;
+				margin-right:30px;
+			}
+			span.reference a:hover{
+				color:#ddd;
+			}
+			ul.sdt_menu{
+				margin-top:150px;
+			}
+			h1.title{
+				text-indent:-9000px;
+				background:transparent url(title.png) no-repeat top left;
+				width:633px;
+				height:69px;
+			}
+		</style>
+    </head>
+
+    <body>
+		<div class="content">
+			<ul id="sdt_menu" class="sdt_menu">
+				<li>
+					<a href="https://drive.google.com/file/d/1Ho9RNgaCmeZwJlfXEPBp-kXHQRO2C4cX/view?usp=drive_open">
+						<img src="1.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">GTA SA</span>
+							<span class="sdt_descr">Tıkla ve İndir</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://drive.google.com/file/d/1Ho9RNgaCmeZwJlfXEPBp-kXHQRO2C4cX/view?usp=drive_open">
+						<img src="2.png" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">GTA VİCE CİTY</span>
+							<span class="sdt_descr">Tıkla ve İndir</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://drive.google.com/file/d/17iG3WHbt0gGac5fyQjkr5MAQTANHro42/view">
+						<img src="3.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">GTA 4</span>
+							<span class="sdt_descr">Tıkla ve İndir</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://filecrypt.co/Container/6C3FD4FBBE.html">
+						<img src="4.png" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">GTA V</span>
+							<span class="sdt_descr">Tıkla ve İndir</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				/**
+				* for each menu element, on mouseenter, 
+				* we enlarge the image, and show both sdt_active span and 
+				* sdt_wrap span. If the element has a sub menu (sdt_box),
+				* then we slide it - if the element is the last one in the menu
+				* we slide it to the left, otherwise to the right
+				*/
+                $('#sdt_menu > li').bind('mouseenter',function(){
+					var $elem = $(this);
+					$elem.find('img')
+						 .stop(true)
+						 .animate({
+							'width':'170px',
+							'height':'170px',
+							'left':'0px'
+						 },400,'easeOutBack')
+						 .andSelf()
+						 .find('.sdt_wrap')
+					     .stop(true)
+						 .animate({'top':'140px'},500,'easeOutBack')
+						 .andSelf()
+						 .find('.sdt_active')
+					     .stop(true)
+						 .animate({'height':'170px'},300,function(){
+						var $sub_menu = $elem.find('.sdt_box');
+						if($sub_menu.length){
+							var left = '170px';
+							if($elem.parent().children().length == $elem.index()+1)
+								left = '-170px';
+							$sub_menu.show().animate({'left':left},200);
+						}	
+					});
+				}).bind('mouseleave',function(){
+					var $elem = $(this);
+					var $sub_menu = $elem.find('.sdt_box');
+					if($sub_menu.length)
+						$sub_menu.hide().css('left','0px');
+					
+					$elem.find('.sdt_active')
+						 .stop(true)
+						 .animate({'height':'0px'},300)
+						 .andSelf().find('img')
+						 .stop(true)
+						 .animate({
+							'width':'0px',
+							'height':'0px',
+							'left':'85px'},400)
+						 .andSelf()
+						 .find('.sdt_wrap')
+						 .stop(true)
+						 .animate({'top':'25px'},500);
+				});
+            });
+        </script>
+    </body>
+<img src="gta.png"><br><br />
+<b>1. Grand Theft Auto (1997)<br><br></b>
+1997 yılında çıkan GTA serisinin ilk oyunu olan Grand Theft Auto diğer oyunlara göre oldukça değişik.2D dünyada geçen ve kalitesi düşük olan bu oyun 1997 yılında geçmektedir.Toplam 3 şehir vardır Liberty City Vice City ve San Andreas bu oyunun 2 genişleme paketi vardır.Ayrıca sadece 4 silah vardı<br><br>
+
+<b>2. Grand Theft Auto : London 1969 (1999)<br><br></b>
+Serinin ikinci oyunu olan GTA London 1969 GTA 1 in genişleme paketidir.GTA 1 e oldukça benzemektedir.Oyun 1969 da geçmektedir.Londrada geçmektedir.Grafikleri GTA 1 e oranla daha iyi görünüyor.<br><br>
+
+<b>3. Grand Theft Auto: London 1961 (1999)<br><br></b>
+Serinin üçüncü oyunu olan GTA London 1961 GTA 1 in genişleme paketdiri GTA London 1969 a sahip olanlar bedava indirebilirler.Hatta GTA London 1969 a sahipseniz şuradan indirebilirsiniz.Oyun 1961 de geçmiştir.GTA London 1969 a çok benzemektedir bit tek Menchester eklenmiştir.<br><br>
+
+<b>4. Grand Theft Auto 2 (1999)<br><br></b>
+Oyunun 4. oyunu olan GTA 2 GTA 1 e göre bayağı gelişmiştir daha intro kısmından bile GTA 1 i geçmektedir.Oyun çeteler,boya gibi birçok GTA klasiklerinin öncüsüdür.Oyun ne gariptir bilinmiyor 2013 yılında geçiyor.Ana karakterimiz GTA 3 oynayanların tanıyacağı Claude Speed.Evet yanlış duymadınız bizim Claude 2013 te.Bir de oyundan çıkarken çıkan dövmeli adamlar bi tuhaf eder insanları.Fakat insanlar oyunda Claude ye farklı şekilde hitap ederler.Kill Frenzy !<br><br>
+
+<b>5. Grand Theft Auto 3 (2001)<br><br></b>
+Serinin 5.oyunu olan GTA 3 serinin devrim niteliğinde olan oyunudur.Pek çok özelliğin öncüsü bu oyundur.İlk kez 3D dünyada geçmiştir.Oyun 2001 yılında geçmiştir.Ana karakterimizin adı Claude dir.<br><br>
+
+<b>6. Grand Theft Auto : Vice City (2002)<br><br></b>
+Serinin 6.oyunu olan GTA Vice City şüphesiz serinin en renkli oyunlarından biridir.Haritanın diğerlerine nazaran küçük olmasına rağmen küçücük adalara bu kadar eğlenceyi sığdırmışlardır.Oyun 1986 yılında geçmektedir.Ana karakterimizin adı Tommy Vercetti dir.<br><br>
+
+<b>7. Grand Theft Auto : San Andreas (2004)<br><br></b>
+Serinin 7.oyunu olan GTA San Andreas serinin en iyi oyunlarından birdir.Gerek haritası gerek görevleri ile birlikte efsane olmuştur hala oynayan vardır.Oyun 1992 yılında geçmektedir ana karakterimizin adı Carl Jonshon (CJ) dir.Bir sahnede Claude ile karşılaşma hatta yarışma sanşınız vardır.<br><br>
+
+<b>8. Grand Theft Auto Advance (2004)<br><br></b>
+Serinin 8.oyunu olan GTA Advance serinin Gameboy Advance için çıkmış sürümüdür.Grafiksel olarak GTA 1 ile yarışabilir ancak.GTA 3 ile GTA 1 in karışımı gibi.Oyun 2004 yılında geçmektedir.Ana karakterimizin adı Mike dir.<br><br>
+
+<b>9. Grand Theft Auto : Liberty City Stories (2005)<br><br></b>
+Serinin 9. oyunu olan GTA Liberty City Stories serinin Playstation için çıkmış olan sürümüdür.Grafikler GTA San Andreasa benzemektedir.Ana karakterimizin adı Toni dir.Oyun Liberty City de 1998 yılında geçmektedir.<br><br>
+
+<b>10. Grand Theft Auto : Vice City Stories (2006)<br><br></b>
+Serinin 10. oyunu olan GTA Vice City Stories , Liberty City Stories e benzemektedir.Ayrıca GTA 3D era diye adlandırılan (GTA 3,VC,SA,LCS,VCS) grubun son oyunudur ana karakterimizin adı Lance Vancenin kardeşi Victor Vancedir.Oyun Vice City de ve GTA Vice Cityden 2 yıl öncesi yani 1984 te geçmektedir.<br><br>
+
+<b>11. Grand Theft Auto IV (2008)<br><br></b>
+Serinin 11.Oyunu olan GTA IV serinin devrim niteliğindeki 2.oyunudur.Mükemmel grafikleri ile göz kamaştıran GTA IV 2008 in Liberty City sinde geçmektedir.Ana karakterimizin adı Niko Bellic'tir.<br><br>
+
+<b>12. Grand Theft Auto IV: The Lost and Damned (2009)<br><br></b>
+GTA IV ın ilk genişleme paketi TLOD serinin 12.oyundur.Oyun Liberty City e farklı bir bakış atar.<br><br>
+
+<b>13. Grand Theft Auto IV : The Ballad of Gay Tony<br><br></b>
+Serinin 13.oyunu olan TBOGT GTA IV ın 2. ve son genişleme paketidir.Oyuna Gay teması ekler.<br><br>
+
+<b>14. Grand Theft Auto : Chinatown Wars (2009)<br><br></b>
+Serinin telefonlar için olan ilk oyunu olan GTA CW serinin 14.oyundur.Daha çok GTA 1 ile GTA 4 ün karışımı diyebiliriz.<br><br>
+
+<b>15. Grand Theft Auto V (2013)<br><br></b>
+Serinin 15.oyunu olan GTA V bir ilke imza atarak 3 ana karakter çıkarmıştır.Oyun 2013 yılında Los Santos ( San Andreas) ta geçmektedir.Oyunda ayrıca birçok şey değişmiştir mesela maksimum aranma seviyesi 5 e inmiştir eskiden 6 idi.
